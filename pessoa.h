@@ -1,7 +1,8 @@
 #ifndef PESSOA_H
 #define PESSOA_H
 
-#include<iostream>
+#include <iostream>
+#include <string.h>
 
 class Pessoa {
 private:
@@ -9,10 +10,14 @@ private:
   int mes;
   int ano;
   int idade;
+  char nome[30];
 
 public:
-  Pessoa(int diaNascimento, int mesNascimento, int anoNascimento);
+  Pessoa();
+  Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa);
+  void inicializar(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa);
   void calculaIdade(int diaAtual, int mesAtual, int anoAtual);
+  void imprimeIdade();
   int informaIdade();
 };
 
