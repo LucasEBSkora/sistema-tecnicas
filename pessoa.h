@@ -1,13 +1,20 @@
 #ifndef PESSOA_H
 #define PESSOA_H
 
-typedef struct pessoa {
+#include<iostream>
+
+class Pessoa {
+private:
   int dia;
   int mes;
   int ano;
   int idade;
-} Pessoa;
 
-int calculaIdade(Pessoa p, int anoAtual);
+public:
+  Pessoa(int diaNascimento, int mesNascimento, int anoNascimento);
+  void calculaIdade(int diaAtual, int mesAtual, int anoAtual);
+  int informaIdade();
+};
+
 
 #endif
