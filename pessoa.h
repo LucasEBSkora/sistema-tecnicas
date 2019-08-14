@@ -14,6 +14,7 @@ private:
 
 public:
   Pessoa();
+  ~Pessoa();
   Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa);
   void inicializar(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa);
   void calculaIdade(int diaAtual, int mesAtual, int anoAtual);

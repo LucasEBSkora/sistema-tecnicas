@@ -2,12 +2,7 @@
 
 using namespace std;
 
-void Pessoa::calculaIdade(int diaAtual, int mesAtual, int anoAtual) {
-
-  idade = anoAtual - ano;
-
-  if (mes > mesAtual) --idade;
-  else if (mes == mesAtual && dia > diaAtual) --idade;
+Pessoa::~Pessoa() {
   
 }
 
@@ -30,11 +25,19 @@ void Pessoa::inicializar(int diaNascimento, int mesNascimento, int anoNascimento
 }
 
 
-
 int Pessoa::informaIdade() {
   return idade;
 } 
 
 void Pessoa::imprimeIdade() {
     cout << "a idade de " << nome << " seria " <<  idade << endl;
+}
+
+void Pessoa::calculaIdade(int diaAtual, int mesAtual, int anoAtual) {
+
+  idade = anoAtual - ano;
+
+  if (mes > mesAtual) --idade;
+  else if (mes == mesAtual && dia > diaAtual) --idade;
+  
 }
