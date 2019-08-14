@@ -5,8 +5,11 @@ Principal::~Principal() {
 }
 
 Principal::Principal() {
-  einstein.inicializar(14, 3, 1879, "Einstein");
-  newton.inicializar(4, 1, 1643, "Newton");
+  princeton.atualizarNome("Princeton");
+  cambridge.atualizarNome("Cambridge");
+
+  einstein.inicializar(14, 3, 1879, "Einstein", &princeton);
+  newton.inicializar(4, 1, 1643, "Newton", &cambridge);
 
   time_t rawTime;
   struct tm *local;
@@ -31,6 +34,8 @@ int Principal::executar() {
   einstein.imprimeIdade();
   newton.imprimeIdade();
   
+  einstein.imprimeUniversidade();
+  newton.imprimeUniversidade();
 
   return 1;
 }

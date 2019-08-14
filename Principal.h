@@ -9,6 +9,9 @@ private:
   Pessoa newton;
   Pessoa einstein;
 
+  Universidade princeton;
+  Universidade cambridge;
+
   int diaHoje;
   int mesHoje;
   int anoHoje;

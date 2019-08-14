@@ -6,22 +6,23 @@ Pessoa::~Pessoa() {
   
 }
 
-Pessoa::Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa) {
+Pessoa::Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa, Universidade* universidadeTrabalho) {
   
-  inicializar(diaNascimento, mesNascimento, anoNascimento, nomePessoa);
+  inicializar(diaNascimento, mesNascimento, anoNascimento, nomePessoa, universidadeTrabalho);
 
 }
 
 Pessoa::Pessoa() {
-  inicializar(0,0,0, "");
+  inicializar(0,0,0, "", NULL);
 }
 
-void Pessoa::inicializar(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa) {
+void Pessoa::inicializar(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa, Universidade* universidadeTrabalho) {
   dia = diaNascimento;
   mes = mesNascimento;
   ano = anoNascimento;
   strcpy(nome, nomePessoa);
   idade = -1;
+  universidade = universidadeTrabalho;
 }
 
 
@@ -40,4 +41,8 @@ void Pessoa::calculaIdade(int diaAtual, int mesAtual, int anoAtual) {
   if (mes > mesAtual) --idade;
   else if (mes == mesAtual && dia > diaAtual) --idade;
   
+}
+
+void Pessoa::imprimeUniversidade() {
+  cout << nome << " trabalha em " << universidade->informarNome() << endl;
 }
