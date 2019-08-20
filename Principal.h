@@ -2,7 +2,7 @@
 #define PRINCIPAL_H
 
 #include "pessoa.h"
-#include <time.h>
+
 class Principal {
 
 private:
@@ -24,4 +24,4 @@ public:
 };
 
 
-#endif 
+#endif

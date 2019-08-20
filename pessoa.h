@@ -3,26 +3,25 @@
 
 #include <iostream>
 #include <string.h>
-#include "Universidade.h"
 
 class Pessoa {
-private:
+protected:
   int dia;
   int mes;
   int ano;
   int idade;
   char nome[30];
-  Universidade* universidade;
+
 
 public:
   Pessoa();
   ~Pessoa();
-  Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa, Universidade* universidadeTrabalho);
-  void inicializar(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa, Universidade* universidadeTrabalho);
+  Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa);
+  void inicializar(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa);
   void calculaIdade(int diaAtual, int mesAtual, int anoAtual);
   void imprimeIdade();
   int informaIdade();
-  void imprimeUniversidade();
+  
 };
 
 

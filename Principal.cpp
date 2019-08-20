@@ -1,7 +1,9 @@
 #include "Principal.h"
 
+#include <time.h>
+
 Principal::~Principal() {
-  
+
 }
 
 Principal::Principal() {
@@ -27,13 +29,13 @@ Principal::Principal() {
 }
 
 int Principal::executar() {
-  
+
   einstein.calculaIdade(13, 8, 2019);
   newton.calculaIdade( 13, 8, 2019);
 
   einstein.imprimeIdade();
   newton.imprimeIdade();
-  
+
   einstein.imprimeUniversidade();
   newton.imprimeUniversidade();
 
