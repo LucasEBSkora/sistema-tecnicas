@@ -1,16 +1,25 @@
 #ifndef PRINCIPAL_H
 #define PRINCIPAL_H
 
-#include "pessoa.h"
+#include "Professor.h"
+#include "Departamento.h"
+#include "Universidade.h"
 
 class Principal {
 
 private:
-  Pessoa newton;
-  Pessoa einstein;
+  Professor simao;
+  Professor newton;
+  Professor einstein;
 
   Universidade princeton;
   Universidade cambridge;
+  Universidade UTFPR;
+
+  Departamento DAINF;
+  Departamento fisicaPrinceton;
+  Departamento matematicaCambridge;
+
 
   int diaHoje;
   int mesHoje;

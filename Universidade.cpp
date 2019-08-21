@@ -1,12 +1,12 @@
 #include "Universidade.h"
 
-#include <string.h>
 
-  Universidade::Universidade(const char* Nome) {
-    strcpy(nome, Nome);
+  Universidade::Universidade(std::string Nome = "") : nome{Nome} {
+
   }
   Universidade::~Universidade() {}
-  void Universidade::atualizarNome(const char* Nome) {
-    strcpy(nome, Nome);
+  void Universidade::setNome(std::string Nome) {
+    nome = Nome;
+
   }
-  char* Universidade::informarNome() {return nome;}
+  std::string Universidade::informarNome() {return nome;}

@@ -8,14 +8,13 @@ private:
   unsigned int RA;
 
 public:
-  Aluno(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa, unsigned int RA);
-
   Aluno();
   ~Aluno();
+  Aluno(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa, unsigned int ra);
 
-  void setRA(unsigned int RA);
+  void setRA(unsigned int ra);
   unsigned int getRA();
 
-}
+};
 
 #endif

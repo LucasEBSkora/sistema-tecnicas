@@ -6,14 +6,15 @@ class Universidade;
 
 class Departamento {
   private:
-    char nome[30];
+    std::string nome;
     Universidade* universidade;
   public:
-  Departamento(const char* nome = "", Universidade* uni = NULL) : universidade{uni} {
-    strcpy(this->nome, nome);
+  Departamento(const char* nome = "", Universidade* uni = NULL) : nome{nome}, universidade{uni} {
+  
   };
   ~Departamento() {};
-  char* informaNome() {return nome;}
+  void setNome(std::string novoNome) {nome = novoNome;}
+  std::string getNome() {return nome;}
 
 };
 

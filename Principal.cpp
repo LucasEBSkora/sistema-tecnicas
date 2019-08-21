@@ -7,11 +7,15 @@ Principal::~Principal() {
 }
 
 Principal::Principal() {
-  princeton.atualizarNome("Princeton");
-  cambridge.atualizarNome("Cambridge");
 
-  einstein.inicializar(14, 3, 1879, "Einstein", &princeton);
-  newton.inicializar(4, 1, 1643, "Newton", &cambridge);
+  DAINF.setNome("DAINF");
+
+
+  princeton.setNome("Princeton");
+  cambridge.setNome("Cambridge");
+
+  einstein = Professor(14, 3, 1879, "Einstein", &princeton, &fisicaPrinceton);
+  newton = Professor(4, 1, 1643, "Newton", &cambridge, &matematicaCambridge);
 
   time_t rawTime;
   struct tm *local;
@@ -25,19 +29,16 @@ Principal::Principal() {
 
   std::cout << diaHoje << "\\" << mesHoje << "\\" << anoHoje << "\n";
 
+  einstein.calculaIdade(13, 8, 2019);
+  newton.calculaIdade( 13, 8, 2019);
+
 
 }
 
 int Principal::executar() {
 
-  einstein.calculaIdade(13, 8, 2019);
-  newton.calculaIdade( 13, 8, 2019);
-
-  einstein.imprimeIdade();
-  newton.imprimeIdade();
-
-  einstein.imprimeUniversidade();
-  newton.imprimeUniversidade();
+  einstein.imprimePessoa();
+  newton.imprimePessoa();
 
   return 1;
 }

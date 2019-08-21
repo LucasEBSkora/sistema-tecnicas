@@ -1,17 +1,20 @@
 #ifndef UNIVERSIDADE_H
 #define UNIVERSIDADE_H
 
-#include "departamento.h"
+#include "Departamento.h"
+#include <string>
+#include <vector>
 
 class Universidade {
 private:
-  char nome[30];
+  std::string nome;
+  std::vector<Departamento*> departamentos;
 
 public:
-  Universidade(const char* Nome = "");
+  Universidade(std::string Nome = "");
   ~Universidade();
-  void atualizarNome(const char* Nome);
-  char* informarNome();
+  void setNome(std::string Nome);
+  std::string informarNome();
 
 
 };
