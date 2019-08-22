@@ -1,6 +1,7 @@
 #include "Principal.h"
 
 #include <time.h>
+#include <iostream>
 
 Principal::~Principal() {
 
@@ -8,6 +9,7 @@ Principal::~Principal() {
 
 Principal::Principal() {
 
+  std::cout << "wtf" << std::endl;
   DAINF.setNome("DAINF");
 
 

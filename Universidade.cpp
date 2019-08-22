@@ -1,9 +1,14 @@
 #include "Universidade.h"
 
 
-  Universidade::Universidade(std::string Nome = "") : nome{Nome} {
+  Universidade::Universidade(std::string Nome) : nome{Nome} {
 
   }
+
+  Universidade::Universidade() {
+
+  }
+  
   Universidade::~Universidade() {}
   void Universidade::setNome(std::string Nome) {
     nome = Nome;

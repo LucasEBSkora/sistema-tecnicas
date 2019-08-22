@@ -2,6 +2,8 @@
 #define PROFESSOR_H
 
 #include "Pessoa.h"
+#include "Universidade.h"
+#include "Departamento.h"
 
 class Professor : public Pessoa {
 private:
@@ -10,8 +12,8 @@ private:
 public:
   ~Professor();
   Professor();
-  Professor(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa, Universidade* uni, Departamento* dep);
-  void inicializar(int diaNascimento, int mesNascimento, int anoNascimento, const char* nomePessoa, Universidade* uni, Departamento* dep);
+  Professor(int diaNascimento, int mesNascimento, int anoNascimento, std::string nomePessoa, Universidade* uni, Departamento* dep);
+  void inicializar(int diaNascimento, int mesNascimento, int anoNascimento, std::string nomePessoa, Universidade* uni, Departamento* dep);
   void imprimePessoa() override;
 };
 

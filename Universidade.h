@@ -11,7 +11,8 @@ private:
   std::vector<Departamento*> departamentos;
 
 public:
-  Universidade(std::string Nome = "");
+  Universidade(std::string Nome);
+  Universidade();
   ~Universidade();
   void setNome(std::string Nome);
   std::string informarNome();

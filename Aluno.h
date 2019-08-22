@@ -1,7 +1,7 @@
 #ifndef ALUNO_H
 #define ALUNO_H
 
-#include "pessoa.h"
+#include "Pessoa.h"
 
 class Aluno : public Pessoa {
 private:
