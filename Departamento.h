@@ -11,13 +11,11 @@ class Departamento {
     std::string nome;
     Universidade* universidade;
   public:
-  Departamento() {}
-  Departamento(std::string Nome, Universidade* uni) : nome{nome}, universidade{uni} {
-  
-  };
-  ~Departamento() {};
-  void setNome(std::string novoNome) {nome = novoNome;}
-  std::string getNome() {return nome;}
+  Departamento();
+  Departamento(std::string Nome, Universidade* uni);
+  ~Departamento();
+  void setNome(std::string novoNome);
+  std::string getNome();
 
 };
 

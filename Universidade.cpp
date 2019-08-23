@@ -14,4 +14,4 @@
     nome = Nome;
 
   }
-  std::string Universidade::informarNome() {return nome;}
+  std::string Universidade::getNome() {return nome;}

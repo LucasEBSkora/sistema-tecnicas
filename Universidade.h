@@ -15,8 +15,8 @@ public:
   Universidade();
   ~Universidade();
   void setNome(std::string Nome);
-  std::string informarNome();
-
+  std::string getNome();
+  void imprime();
 
 };
 

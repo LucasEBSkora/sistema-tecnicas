@@ -16,5 +16,5 @@
 
 void Professor::Professor::imprimePessoa() {
   std::cout << nome << "tem " << idade << "anos, nasceu em " << dia << "\\" << mes << "\\" << ano << 
-  "e trabalha em " << universidade->informarNome() << "no departamento " << departamento->getNome() << std::endl;
+  "e trabalha em " << universidade->getNome() << "no departamento " << departamento->getNome() << std::endl;
 }

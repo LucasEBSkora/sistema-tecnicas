@@ -9,7 +9,6 @@ Principal::~Principal() {
 
 Principal::Principal() {
 
-  std::cout << "wtf" << std::endl;
   DAINF.setNome("DAINF");
 
 
