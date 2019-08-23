@@ -30,6 +30,9 @@ public:
   int executar();
   ~Principal();
 
+private:
+  void descobreData();
+
 };
 
 

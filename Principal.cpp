@@ -9,6 +9,8 @@ Principal::~Principal() {
 
 Principal::Principal() {
 
+  descobreData();
+
   DAINF.setNome("DAINF");
 
 
@@ -18,17 +20,6 @@ Principal::Principal() {
   einstein = Professor(14, 3, 1879, "Einstein", &princeton, &fisicaPrinceton);
   newton = Professor(4, 1, 1643, "Newton", &cambridge, &matematicaCambridge);
 
-  time_t rawTime;
-  struct tm *local;
-
-  time(&rawTime);
-  local = gmtime(&rawTime);
-
-  diaHoje = local->tm_mday;
-  mesHoje = local->tm_mon + 1;
-  anoHoje = local->tm_year + 1900;
-
-  std::cout << diaHoje << "\\" << mesHoje << "\\" << anoHoje << "\n";
 
   einstein.calculaIdade(13, 8, 2019);
   newton.calculaIdade( 13, 8, 2019);
@@ -42,4 +33,19 @@ int Principal::executar() {
   newton.imprimePessoa();
 
   return 1;
+}
+
+void Principal::descobreData() {
+
+  time_t rawTime;
+  struct tm *local;
+
+  time(&rawTime);
+  local = gmtime(&rawTime);
+
+  diaHoje = local->tm_mday;
+  mesHoje = local->tm_mon + 1;
+  anoHoje = local->tm_year + 1900;
+
+  std::cout << diaHoje << "\\" << mesHoje << "\\" << anoHoje << "\n";
 }
