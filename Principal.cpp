@@ -12,17 +12,19 @@ Principal::Principal() {
   descobreData();
 
   DAINF.setNome("DAINF");
-
+  fisicaPrinceton.setNome("Física");
+  matematicaCambridge.setNome("Matematica");
 
   princeton.setNome("Princeton");
   cambridge.setNome("Cambridge");
+  UTFPR.setNome("UTFPR");
 
   einstein = Professor(14, 3, 1879, "Einstein", &princeton, &fisicaPrinceton);
   newton = Professor(4, 1, 1643, "Newton", &cambridge, &matematicaCambridge);
+  simao = Professor(3, 10, 1976, "Jean Simao");
 
-
-  einstein.calculaIdade(13, 8, 2019);
-  newton.calculaIdade( 13, 8, 2019);
+  einstein.calculaIdade(diaHoje, mesHoje, anoHoje);
+  newton.calculaIdade( diaHoje, mesHoje, anoHoje);
 
 
 }

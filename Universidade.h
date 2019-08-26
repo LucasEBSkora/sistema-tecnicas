@@ -16,7 +16,9 @@ public:
   ~Universidade();
   void setNome(std::string Nome);
   std::string getNome();
+  void adicionaDepartamento(Departamento* dept);
   void imprime();
+
 
 };
 
