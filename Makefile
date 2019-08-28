@@ -1,5 +1,5 @@
 #OBJS specifies which files to compile as part of the project
-OBJS =  main.cpp Principal.cpp Pessoas/Pessoa.cpp Pessoas/Aluno.cpp Pessoas/Professor.cpp Universidade/Universidade.cpp Universidade/Departamento.cpp utils/Data.cpp
+OBJS =  main.cpp Principal.cpp Pessoas/Pessoa.cpp Pessoas/Aluno.cpp Pessoas/Professor.cpp Universidade/Universidade.cpp Universidade/Departamento.cpp utils/Data.cpp listas/ListaUniversidades.cpp listas/ElementoListaUniversidade.cpp
 
 
 #CC specifies which compiler we're using

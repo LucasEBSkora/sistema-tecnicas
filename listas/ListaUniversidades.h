@@ -11,8 +11,11 @@ class ListaUniversidades {
     ElementoListaUniversidade* atual;
     unsigned int tamanho;
   public:
+    
     ListaUniversidades();
     ~ListaUniversidades();
+
+    unsigned int getTamanho();
 
     Universidade* irInicio();
     Universidade* avancar();
@@ -25,14 +28,17 @@ class ListaUniversidades {
 
     void adicionarElementoInicio(Universidade* nova);
     void adicionarElementoFim(Universidade* nova);
-    void adicionarElementoIndice(Universidade* nova, unsigned int indice);
+    bool adicionarElementoIndice(Universidade* nova, unsigned int indice);
+
 
     Universidade* removerElementoInicio();
     Universidade* removerElementoFim();
     Universidade* removerElementoIndice(unsigned int indice);
     
-    Universidade* atual();
-
+    Universidade* getAtual();
+    
+  private:
+    void adicionarPrimeiroElemento(Universidade* nova);
   
 
 };
