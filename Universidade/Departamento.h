@@ -17,6 +17,7 @@ class Departamento {
   ~Departamento();
   void setNome(std::string novoNome);
   std::string getNome();
+  void setUniversidade(Universidade* uni);
 
 };
 

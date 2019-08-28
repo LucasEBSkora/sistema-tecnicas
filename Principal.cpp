@@ -12,10 +12,12 @@ Principal::Principal() {
   descobreData();
 
   DAINF.setNome("DAINF");
-
+  fisicaPrinceton.setNome("Física");
+  matematicaCambridge.setNome("Matematica");
 
   princeton.setNome("Princeton");
   cambridge.setNome("Cambridge");
+  UTFPR.setNome("UTFPR");
 
   einstein = Professor(0, Data(14, 3, 1879), "Einstein", &princeton, &fisicaPrinceton);
   newton = Professor(0, Data(4, 1, 1643), "Newton", &cambridge, &matematicaCambridge);

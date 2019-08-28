@@ -15,6 +15,6 @@
   }
 
 void Professor::Professor::imprimePessoa() {
-  std::cout << nome << "tem " << idade << "anos, nasceu em " << nascimento.paraTexto() << 
+  std::cout << nome << " tem " << idade << " anos, nasceu em " << nascimento.paraTexto() << 
   " e trabalha em " << universidade->getNome() << " no departamento " << departamento->getNome() << std::endl;
 }
