@@ -1,7 +1,7 @@
 #include "Universidade.h"
 
 
-  Universidade::Universidade(std::string Nome) : nome{Nome} {
+  Universidade::Universidade(int ID, std::string Nome) : id{ID}, nome{Nome} {
 
   }
 

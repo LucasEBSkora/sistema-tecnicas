@@ -4,8 +4,8 @@
 
   }
 
-  Departamento::Departamento(std::string Nome, Universidade* uni) 
-    : nome{nome}, universidade{uni} {
+  Departamento::Departamento(int ID, std::string Nome, Universidade* uni) 
+    : id{ID}, nome{Nome}, universidade{uni} {
   
   }
   

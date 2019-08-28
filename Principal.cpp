@@ -17,12 +17,12 @@ Principal::Principal() {
   princeton.setNome("Princeton");
   cambridge.setNome("Cambridge");
 
-  einstein = Professor(14, 3, 1879, "Einstein", &princeton, &fisicaPrinceton);
-  newton = Professor(4, 1, 1643, "Newton", &cambridge, &matematicaCambridge);
+  einstein = Professor(0, Data(14, 3, 1879), "Einstein", &princeton, &fisicaPrinceton);
+  newton = Professor(0, Data(4, 1, 1643), "Newton", &cambridge, &matematicaCambridge);
 
 
-  einstein.calculaIdade(13, 8, 2019);
-  newton.calculaIdade( 13, 8, 2019);
+  einstein.calculaIdade(dataAtual);
+  newton.calculaIdade(dataAtual);
 
 
 }
@@ -43,9 +43,12 @@ void Principal::descobreData() {
   time(&rawTime);
   local = gmtime(&rawTime);
 
-  diaHoje = local->tm_mday;
-  mesHoje = local->tm_mon + 1;
-  anoHoje = local->tm_year + 1900;
+  int diaHoje = local->tm_mday;
+  int mesHoje = local->tm_mon + 1;
+  int anoHoje = local->tm_year + 1900;
 
-  std::cout << diaHoje << "\\" << mesHoje << "\\" << anoHoje << "\n";
+  dataAtual = Data(diaHoje, mesHoje, anoHoje);
+
+
+  std::cout << dataAtual.paraTexto() << '\n';
 }

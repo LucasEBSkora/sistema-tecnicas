@@ -8,11 +8,12 @@ class Universidade;
 
 class Departamento {
   private:
+    int id;
     std::string nome;
     Universidade* universidade;
   public:
   Departamento();
-  Departamento(std::string Nome, Universidade* uni);
+  Departamento(int ID, std::string Nome, Universidade* uni);
   ~Departamento();
   void setNome(std::string novoNome);
   std::string getNome();

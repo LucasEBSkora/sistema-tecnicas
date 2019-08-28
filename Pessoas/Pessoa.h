@@ -2,20 +2,19 @@
 #define PESSOA_H
 
 #include <string>
+#include "../utils/Data.h"
 
 class Pessoa {
 protected:
-  int dia;
-  int mes;
-  int ano;
+  int id;
+  Data nascimento;
   int idade;
   std::string nome;
-
 public:
   Pessoa();
   ~Pessoa();
-  Pessoa(int diaNascimento, int mesNascimento, int anoNascimento, std::string nomePessoa);
-  void calculaIdade(int diaAtual, int mesAtual, int anoAtual);
+  Pessoa(int ID, Data Nascimento, std::string nomePessoa);
+  void calculaIdade(Data atual);
   virtual void imprimePessoa();
   
 };

@@ -7,11 +7,12 @@
 
 class Universidade {
 private:
+  int id;
   std::string nome;
   std::vector<Departamento*> departamentos;
 
 public:
-  Universidade(std::string Nome);
+  Universidade(int ID, std::string Nome);
   Universidade();
   ~Universidade();
   void setNome(std::string Nome);
