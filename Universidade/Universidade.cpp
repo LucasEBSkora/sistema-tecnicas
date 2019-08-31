@@ -21,15 +21,23 @@ void Universidade::setNome(std::string Nome) {
 std::string Universidade::getNome() {return nome;}
 
 void Universidade::adicionaDepartamento(Departamento* dept) {
-  departamentos.push_back(dept);
+  departamentos.adicionarElementoFim(dept);
   dept->setUniversidade(this);
 }
 
 void Universidade::imprime() {
   std::cout << "A universidade " << nome << "tem os seguintes departamentos:\n";
 
-  for(Departamento *d : departamentos) {
-    std::cout << '\t' << d->getNome() << '\n';
+  if (departamentos.getTamanho() != 0) {
+    Departamento* dep = departamentos.irInicio();
+  
+    while (!departamentos.noFim()) {
+
+      std::cout << '\t' << dep->getNome() << '\n';
+      dep = departamentos.avancar();    
+    }
+
+  
   }
 
   std::cout.flush();

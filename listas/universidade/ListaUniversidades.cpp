@@ -1,6 +1,6 @@
 #include "ListaUniversidades.h"
 
-ListaUniversidades::ListaUniversidades() : inicio{NULL}, fim{NULL}, atual{NULL}, tamanho{0} {
+ListaUniversidades::ListaUniversidades() : inicio{nullptr}, fim{nullptr}, atual{nullptr}, tamanho{0} {
 
 }
 
@@ -10,9 +10,9 @@ ListaUniversidades::~ListaUniversidades() {
     removerElementoFim();
   }
 
-  inicio = NULL;
-  fim = NULL;
-  atual = NULL;
+  inicio = nullptr;
+  fim = nullptr;
+  atual = nullptr;
 }
 
 unsigned int ListaUniversidades::getTamanho() {
@@ -26,12 +26,12 @@ Universidade* ListaUniversidades::irInicio() {
 
 Universidade* ListaUniversidades::avancar() {
 
-  atual = (atual->depois != NULL) ? atual->depois : atual;
+  atual = (atual->depois != nullptr) ? atual->depois : atual;
   return getAtual();
 }
 
 Universidade* ListaUniversidades::voltar() {
-  atual = (atual->antes != NULL) ? atual->antes : atual;
+  atual = (atual->antes != nullptr) ? atual->antes : atual;
   return getAtual();
 }
 
@@ -46,7 +46,7 @@ Universidade* ListaUniversidades::irIndice(unsigned int indice) {
   for (unsigned int i = 0; i < indice; ++i) {
     avancar();
   }
-  return atual->universidade;
+  return atual->el;
 }
 
 
@@ -65,9 +65,9 @@ void ListaUniversidades::adicionarElementoInicio(Universidade* nova) {
   } else {
 
     //cria novo elemento com nada antes e o inicio "depois"
-    ElementoListaUniversidade *novo = new ElementoListaUniversidade(nova, NULL, inicio);
+    ElementoListaUniversidade *novo = new ElementoListaUniversidade(nova, nullptr, inicio);
     //coloca novo antes do inicio
-    if (inicio != NULL) inicio->antes = novo;
+    if (inicio != nullptr) inicio->antes = novo;
     //coloca novo como inicio
     inicio = novo;
     
@@ -83,7 +83,7 @@ void ListaUniversidades::adicionarElementoFim(Universidade* nova) {
   } else {
 
     //cria novo elemento com o fim antes e nada depois
-    ElementoListaUniversidade *novo = new ElementoListaUniversidade(nova, fim, NULL);
+    ElementoListaUniversidade *novo = new ElementoListaUniversidade(nova, fim, nullptr);
     //coloca novo depois do fim
     fim->depois = novo;
     //coloca novo como fim
@@ -122,24 +122,24 @@ bool ListaUniversidades::adicionarElementoIndice(Universidade* nova, unsigned in
 
 void ListaUniversidades::adicionarPrimeiroElemento(Universidade* nova) {
   if (tamanho != 0) return;
-  ElementoListaUniversidade* novoElemento = new ElementoListaUniversidade(nova, NULL, NULL);
+  ElementoListaUniversidade* novoElemento = new ElementoListaUniversidade(nova, nullptr, nullptr);
   inicio == novoElemento;
   fim = novoElemento;
   ++tamanho;
 }
 
 Universidade* ListaUniversidades::removerElementoInicio() {
-  if (atual == inicio) atual == NULL;
-  if (inicio != NULL) {
+  if (atual == inicio) atual == nullptr;
+  if (inicio != nullptr) {
     
     //recupera o elemento que será o novo inicio
     ElementoListaUniversidade *aux = inicio->depois;
 
     //aterra o ponteiro do novo início (se houver)
-    if (aux != NULL) aux->antes = NULL; 
+    if (aux != nullptr) aux->antes = nullptr; 
 
     //recupera a universidade representada pelo inicio antigo (para poder retorná-la)
-    Universidade* uni = inicio->universidade;
+    Universidade* uni = inicio->el;
     
     //destroi o inicio antigo
     delete inicio;
@@ -152,22 +152,22 @@ Universidade* ListaUniversidades::removerElementoInicio() {
     return uni;
 
   } else {
-    return NULL;
+    return nullptr;
   }
 }
 
 Universidade* ListaUniversidades::removerElementoFim() {
-  if (atual == fim) atual == NULL;
-    if (fim != NULL) {
+  if (atual == fim) atual == nullptr;
+    if (fim != nullptr) {
     
     //recupera o elemento que será o novo fim
     ElementoListaUniversidade *aux = fim->antes;
 
     //aterra o ponteiro do novo fim (se houver)
-    if (aux != NULL) aux->depois = NULL; 
+    if (aux != nullptr) aux->depois = nullptr; 
 
     //recupera a universidade representada pelo fim antigo (para poder retorná-la)
-    Universidade* uni = fim->universidade;
+    Universidade* uni = fim->el;
     
     //destroi o fim antigo
     delete fim;
@@ -180,13 +180,13 @@ Universidade* ListaUniversidades::removerElementoFim() {
     return uni;
 
   } else {
-    return NULL;
+    return nullptr;
   }
 
 }
 
 Universidade* ListaUniversidades::removerElementoIndice(unsigned int indice) {
-  if (indice >= tamanho) return NULL;
+  if (indice >= tamanho) return nullptr;
   else if (indice == tamanho -1) return removerElementoFim();
   else if (indice == 0) return removerElementoInicio();
   else {
@@ -202,7 +202,7 @@ Universidade* ListaUniversidades::removerElementoIndice(unsigned int indice) {
     //faz o elemento depois dele apontar para o antes dele
     p->depois->antes = p->antes;
     //recupera a universidade armazenada
-    Universidade* uni = p->universidade;
+    Universidade* uni = p->el;
     
     delete p;
 
@@ -215,5 +215,5 @@ Universidade* ListaUniversidades::removerElementoIndice(unsigned int indice) {
 
 
 Universidade* ListaUniversidades::getAtual() {
-  return (atual != NULL) ? atual->universidade : NULL;
+  return (atual != nullptr) ? atual->el : nullptr;
 }

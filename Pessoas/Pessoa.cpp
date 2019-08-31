@@ -29,3 +29,11 @@ void Pessoa::calculaIdade(Data atual) {
 void Pessoa::imprimePessoa() {
   std::cout << nome << " tem " << idade << "anos, nasceu em " << nascimento.paraTexto() << std::endl;
 }
+
+int Pessoa::getID() {
+  return id;
+}
+
+void Pessoa::setID(int ID) {
+  id = ID; 
+}

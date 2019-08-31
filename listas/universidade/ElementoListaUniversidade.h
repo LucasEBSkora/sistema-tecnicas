@@ -1,17 +1,16 @@
 #ifndef ELEMENTOLISTAUNIVERSIDADE_H
 #define ELEMENTOLISTAUNIVERSIDADE_H
 
-#include "../Universidade/Universidade.h"
+class Universidade;
 
 class ListaUniversidades;
 
 class ElementoListaUniversidade {
 
   friend ListaUniversidades;
-  //pq n funciona??
-
+ 
   private:
-    Universidade *universidade;
+    Universidade *el;
     ElementoListaUniversidade  *antes;
     ElementoListaUniversidade *depois;
 
@@ -19,7 +18,7 @@ class ElementoListaUniversidade {
   public:
   
     ElementoListaUniversidade();
-    ElementoListaUniversidade(Universidade* uni, ElementoListaUniversidade* a, ElementoListaUniversidade* d);
+    ElementoListaUniversidade(Universidade* El, ElementoListaUniversidade* a, ElementoListaUniversidade* d);
     ~ElementoListaUniversidade();
 
     

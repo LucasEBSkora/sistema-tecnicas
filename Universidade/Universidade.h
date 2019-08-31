@@ -2,23 +2,28 @@
 #define UNIVERSIDADE_H
 
 #include "Departamento.h"
+#include "../listas/departamento/ListaDepartamentos.h"
 #include <string>
-#include <vector>
+
 
 class Universidade {
 private:
   int id;
   std::string nome;
-  std::vector<Departamento*> departamentos;
+  ListaDepartamentos departamentos;
 
 public:
   Universidade(int ID, std::string Nome);
   Universidade();
   ~Universidade();
+
   void setNome(std::string Nome);
   std::string getNome();
-  void adicionaDepartamento(Departamento* dept);
+  
   void imprime();
+  
+  void adicionaDepartamento(Departamento* dept);
+  Departamento* removeDepartamento(int ID);
 
 
 };
