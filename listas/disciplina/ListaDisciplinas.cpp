@@ -25,13 +25,12 @@ Disciplina* ListaDisciplinas::irInicio() {
 }
 
 Disciplina* ListaDisciplinas::avancar() {
-
-  atual = (atual->depois != nullptr) ? atual->depois : atual;
+  atual = atual->depois;
   return getAtual();
 }
 
 Disciplina* ListaDisciplinas::voltar() {
-  atual = (atual->antes != nullptr) ? atual->antes : atual;
+  atual = atual->antes;  
   return getAtual();
 }
 
@@ -123,7 +122,7 @@ bool ListaDisciplinas::adicionarElementoIndice(Disciplina* nova, unsigned int in
 void ListaDisciplinas::adicionarPrimeiroElemento(Disciplina* nova) {
   if (tamanho != 0) return;
   ElementoListaDisciplina* novoElemento = new ElementoListaDisciplina(nova, nullptr, nullptr);
-  inicio == novoElemento;
+  inicio = novoElemento;
   fim = novoElemento;
   ++tamanho;
 }

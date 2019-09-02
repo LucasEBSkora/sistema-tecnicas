@@ -43,13 +43,22 @@ int Disciplina::getID() {
   return id;
 }
 
+
+void Disciplina::setNome(std::string Nome) {
+  nome = Nome;
+}
+
+std::string Disciplina::getNome() {
+  return nome;
+}
+
 void Disciplina::imprimir() {
-  std::cout << "A Disciplina " << nome << "tem os seguintes alunos matriculados:\n";
+  std::cout << "A Disciplina " << nome << " tem os seguintes alunos matriculados:\n";
 
   if (alunos.getTamanho() != 0) {
     Aluno* al = alunos.irInicio();
 
-    while (!departamentos.noFim()) {
+    while (al != nullptr) {
 
       std::cout << '\t' << al->getNome() << '\n';
       al = alunos.avancar();

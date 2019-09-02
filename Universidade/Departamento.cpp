@@ -51,12 +51,12 @@ Disciplina* Departamento::removerDisciplina(int ID) {
 }
 
 void Departamento::imprimir() {
-  std::cout << "O departamento " << nome << "tem os seguintes alunos matriculados:\n";
+  std::cout << "O departamento " << nome << " tem os seguintes alunos matriculados:\n";
 
   if (alunos.getTamanho() != 0) {
     Aluno* al = alunos.irInicio();
 
-    while (!departamentos.noFim()) {
+    while (!alunos.noFim()) {
 
       std::cout << '\t' << al->getNome() << '\n';
       al = alunos.avancar();
@@ -68,7 +68,7 @@ void Departamento::imprimir() {
   if (disciplinas.getTamanho() != 0) {
     Disciplina* dis = disciplinas.irInicio();
 
-    while (!disciplinas.noFim()) {
+    while (dis != nullptr) {
 
       std::cout << '\t' << dis->getNome() << '\n';
       dis = disciplinas.avancar();

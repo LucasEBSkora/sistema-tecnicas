@@ -25,44 +25,42 @@ Principal::Principal() :
   lucas{idAtual++, Data(27, 11, 2000), "Lucas Eduardo Bonancio Skora", 171},
   dataAtual{Data::atual()}
  {
-   void inicProfessores();
-   void inicUniversidades();
-   void inicDepartamentos();
-   void inicDisciplinas();
-   void inicAlunos();
-
+   inicProfessores();
+   inicUniversidades();
+   inicDepartamentos();
+   inicDisciplinas();
+   inicAlunos();
 }
 
 int Principal::executar() {
 
-  void imprimeProfessores();
-  void imprimeUniversidades();
-  void imprimeDepartamentos();
-  void imprimeDisciplinas();
-  void imprimeAlunos();
-
+  imprimeProfessores();
+  imprimeUniversidades();
+  imprimeDepartamentos();
+  imprimeDisciplinas();
+  imprimeAlunos();
   return 0;
 }
 
-void Principal::inicProfessores(){
+void Principal::inicProfessores() {
   simao.calculaIdade(dataAtual);
   einstein.calculaIdade(dataAtual);
   newton.calculaIdade(dataAtual);
 }
 
-void Principal::inicUniversidades(){
+void Principal::inicUniversidades() {
   UTFPR.adicionarDepartamento(&DAINF);
   cambridge.adicionarDepartamento(&matematicaCambridge);
   princeton.adicionarDepartamento(&fisicaPrinceton);
 }
 
-void Principal::inicDepartamentos(){
+void Principal::inicDepartamentos() {
   DAINF.adicionarDisciplina(&tecProg);
   DAINF.adicionarDisciplina(&fundProg1);
   DAINF.adicionarDisciplina(&intrLog);
 }
 
-void Principal::inicDisciplinas(){
+void Principal::inicDisciplinas() {
   intrLog.adicionarAluno(&franco);
   fundProg1.adicionarAluno(&thiago);
   fundProg1.adicionarAluno(&lucas);
@@ -72,40 +70,43 @@ void Principal::inicDisciplinas(){
 
 }
 
-void Principal::inicAlunos(){
+void Principal::inicAlunos() {
   thiago.calculaIdade(dataAtual);
   franco.calculaIdade(dataAtual);
   lucas.calculaIdade(dataAtual);
 }
 
-void Principal::imprimeProfessores(){
-  simao.imprimePessoa();
-  einstein.imprimePessoa();
-  newton.imprimePessoa();
+void Principal::imprimeProfessores() {
+  simao.imprimir();
+  einstein.imprimir();
+  newton.imprimir();
+  std::cout << '\n';
 }
 
-void Principal::imprimeUniversidades(){
+void Principal::imprimeUniversidades() {
   UTFPR.imprimir();
   cambridge.imprimir();
   princeton.imprimir();
-
+  std::cout << '\n';
 }
 
-void Principal::imprimeDepartamentos(){
+void Principal::imprimeDepartamentos() {
   DAINF.imprimir();
   fisicaPrinceton.imprimir();
   matematicaCambridge.imprimir();
+  std::cout << '\n';
 }
 
-void Principal::imprimeDisciplinas(){
+void Principal::imprimeDisciplinas() {
   tecProg.imprimir();
   fundProg1.imprimir();
   intrLog.imprimir();
-
+  std::cout << '\n';
 }
 
-void Principal::imprimeAlunos(){
+void Principal::imprimeAlunos() {
   thiago.imprimir();
   franco.imprimir();
   lucas.imprimir();
+  std::cout << '\n';
 }

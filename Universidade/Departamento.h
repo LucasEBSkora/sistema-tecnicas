@@ -5,7 +5,9 @@
 class Universidade;
 #include <string>
 #include "../listas/disciplina/ListaDisciplinas.h"
+#include "../listas/aluno/ListaAlunos.h"
 #include "Disciplina.h"
+#include "../Pessoas/Aluno.h"
 
 class Departamento {
   private:
@@ -13,6 +15,7 @@ class Departamento {
     std::string nome;
     Universidade* universidade;
     ListaDisciplinas disciplinas;
+    ListaAlunos alunos;
   public:
   Departamento();
   Departamento(int ID, std::string Nome, Universidade* uni);

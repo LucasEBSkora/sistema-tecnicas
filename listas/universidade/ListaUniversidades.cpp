@@ -25,13 +25,12 @@ Universidade* ListaUniversidades::irInicio() {
 }
 
 Universidade* ListaUniversidades::avancar() {
-
-  atual = (atual->depois != nullptr) ? atual->depois : atual;
+  atual = atual->depois;
   return getAtual();
 }
 
 Universidade* ListaUniversidades::voltar() {
-  atual = (atual->antes != nullptr) ? atual->antes : atual;
+  atual = atual->antes;  
   return getAtual();
 }
 
@@ -123,7 +122,7 @@ bool ListaUniversidades::adicionarElementoIndice(Universidade* nova, unsigned in
 void ListaUniversidades::adicionarPrimeiroElemento(Universidade* nova) {
   if (tamanho != 0) return;
   ElementoListaUniversidade* novoElemento = new ElementoListaUniversidade(nova, nullptr, nullptr);
-  inicio == novoElemento;
+  inicio = novoElemento;
   fim = novoElemento;
   ++tamanho;
 }

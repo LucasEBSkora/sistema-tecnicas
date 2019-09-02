@@ -25,13 +25,12 @@ Aluno* ListaAlunos::irInicio() {
 }
 
 Aluno* ListaAlunos::avancar() {
-
-  atual = (atual->depois != nullptr) ? atual->depois : atual;
+  atual = atual->depois;
   return getAtual();
 }
 
 Aluno* ListaAlunos::voltar() {
-  atual = (atual->antes != nullptr) ? atual->antes : atual;
+  atual = atual->antes;  
   return getAtual();
 }
 
@@ -123,7 +122,7 @@ bool ListaAlunos::adicionarElementoIndice(Aluno* nova, unsigned int indice) {
 void ListaAlunos::adicionarPrimeiroElemento(Aluno* nova) {
   if (tamanho != 0) return;
   ElementoListaAluno* novoElemento = new ElementoListaAluno(nova, nullptr, nullptr);
-  inicio == novoElemento;
+  inicio = novoElemento;
   fim = novoElemento;
   ++tamanho;
 }

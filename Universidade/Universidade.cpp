@@ -26,12 +26,13 @@ void Universidade::adicionarDepartamento(Departamento* dept) {
 }
 
 void Universidade::imprimir() {
-  std::cout << "A universidade " << nome << "tem os seguintes departamentos:\n";
-
+  std::cout << "A universidade " << nome << " tem os seguintes departamentos:\n";
+  
   if (departamentos.getTamanho() != 0) {
+
     Departamento* dep = departamentos.irInicio();
 
-    while (!departamentos.noFim()) {
+    while (dep != nullptr) {
 
       std::cout << '\t' << dep->getNome() << '\n';
       dep = departamentos.avancar();

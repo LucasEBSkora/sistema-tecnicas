@@ -20,6 +20,8 @@ class Disciplina {
     void removerAluno(int ID);
     void setID(int ID);
     int getID();
+    void setNome(std::string Nome);
+    std::string getNome();
     void imprimir();
 };
 

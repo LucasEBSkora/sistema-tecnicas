@@ -15,6 +15,8 @@ class Aluno : public Pessoa {
 
     void setRA(unsigned int ra);
     unsigned int getRA();
+    void setNome(std::string Nome);
+    std::string getNome();
     void imprimir() override;
 
 };

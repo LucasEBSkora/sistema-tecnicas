@@ -23,7 +23,6 @@ void Pessoa::calculaIdade(Data atual) {
 
   if (nascimento.mes > atual.mes) --idade;
   else if (nascimento.mes == atual.mes && nascimento.dia > atual.dia) --idade;
-
 }
 
 void Pessoa::imprimir() {

@@ -25,13 +25,12 @@ Departamento* ListaDepartamentos::irInicio() {
 }
 
 Departamento* ListaDepartamentos::avancar() {
-
-  atual = (atual->depois != nullptr) ? atual->depois : atual;
+  atual = atual->depois;
   return getAtual();
 }
 
 Departamento* ListaDepartamentos::voltar() {
-  atual = (atual->antes != nullptr) ? atual->antes : atual;
+  atual = atual->antes;
   return getAtual();
 }
 
@@ -123,7 +122,7 @@ bool ListaDepartamentos::adicionarElementoIndice(Departamento* nova, unsigned in
 void ListaDepartamentos::adicionarPrimeiroElemento(Departamento* nova) {
   if (tamanho != 0) return;
   ElementoListaDepartamento* novoElemento = new ElementoListaDepartamento(nova, nullptr, nullptr);
-  inicio == novoElemento;
+  inicio = novoElemento;
   fim = novoElemento;
   ++tamanho;
 }
