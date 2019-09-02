@@ -1,9 +1,11 @@
 #include "Data.h"
 
-#include <string.h>
+#include <sstream>
+#include <iomanip>
+#include <time.h>
 
 Data::Data() : dia{0}, mes{0}, ano{0} {
-  
+
 }
 
 
@@ -16,8 +18,24 @@ Data::~Data() {
 
 }
 std::string Data::paraTexto() {
-  char data[11];
-  sprintf(data, "%02d/%02d/%04d", dia, mes, ano);
-  return data;
-  
+  std::stringstream strs;
+  strs << std::setfill('0') << std::setw(2) << dia << std::setw(1) << '/'
+  << std::setw(2) << mes << std::setw(1) << '/' << std::setw(4) << ano;
+  return strs.str();
+
+}
+
+Data Data::atual() {
+
+  time_t rawTime;
+  struct tm *local;
+
+  time(&rawTime);
+  local = gmtime(&rawTime);
+
+  int diaHoje = local->tm_mday;
+  int mesHoje = local->tm_mon + 1;
+  int anoHoje = local->tm_year + 1900;
+
+  return Data(diaHoje, mesHoje, anoHoje);
 }

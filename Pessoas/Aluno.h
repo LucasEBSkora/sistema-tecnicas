@@ -15,6 +15,7 @@ class Aluno : public Pessoa {
 
     void setRA(unsigned int ra);
     unsigned int getRA();
+    void imprimir() override;
 
 };
 

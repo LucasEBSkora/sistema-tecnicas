@@ -6,13 +6,13 @@ Pessoa::~Pessoa() {
 
 }
 
-Pessoa::Pessoa(int ID, Data Nascimento, std::string nomePessoa = "") : 
+Pessoa::Pessoa(int ID, Data Nascimento, std::string nomePessoa = "") :
   id{ID}, nascimento{Nascimento}, idade{-1}, nome{nomePessoa} {
 
 }
 
 Pessoa::Pessoa() {
-  
+
 }
 
 
@@ -26,7 +26,7 @@ void Pessoa::calculaIdade(Data atual) {
 
 }
 
-void Pessoa::imprimePessoa() {
+void Pessoa::imprimir() {
   std::cout << nome << " tem " << idade << "anos, nasceu em " << nascimento.paraTexto() << std::endl;
 }
 
@@ -35,5 +35,5 @@ int Pessoa::getID() {
 }
 
 void Pessoa::setID(int ID) {
-  id = ID; 
+  id = ID;
 }

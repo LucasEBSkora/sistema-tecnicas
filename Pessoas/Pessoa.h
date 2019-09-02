@@ -15,7 +15,7 @@ public:
   ~Pessoa();
   Pessoa(int ID, Data Nascimento, std::string nomePessoa);
   void calculaIdade(Data atual);
-  virtual void imprimePessoa();
+  virtual void imprimir();
   int getID();
   void setID(int ID);
 };

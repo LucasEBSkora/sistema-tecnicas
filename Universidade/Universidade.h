@@ -19,11 +19,11 @@ public:
 
   void setNome(std::string Nome);
   std::string getNome();
-  
-  void imprime();
-  
-  void adicionaDepartamento(Departamento* dept);
-  Departamento* removeDepartamento(int ID);
+
+  void imprimir();
+
+  void adicionarDepartamento(Departamento* dept);
+  Departamento* removerDepartamento(int ID);
 
 
 };

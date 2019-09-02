@@ -20,8 +20,10 @@ class Departamento {
   void setNome(std::string novoNome);
   std::string getNome();
   void setUniversidade(Universidade* uni);
-  void AdicionarDisciplina(Disciplina* disciplina);
+
+  void adicionarDisciplina(Disciplina* disciplina);
   Disciplina* removerDisciplina(int ID);
+  void imprimir();
 };
 
 #endif

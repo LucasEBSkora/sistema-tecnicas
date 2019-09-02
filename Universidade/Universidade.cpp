@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-Universidade::Universidade(int ID, std::string Nome) : id{ID}, nome{Nome} { 
+Universidade::Universidade(int ID, std::string Nome) : id{ID}, nome{Nome} {
 
 }
 
@@ -20,24 +20,24 @@ void Universidade::setNome(std::string Nome) {
 }
 std::string Universidade::getNome() {return nome;}
 
-void Universidade::adicionaDepartamento(Departamento* dept) {
+void Universidade::adicionarDepartamento(Departamento* dept) {
   departamentos.adicionarElementoFim(dept);
   dept->setUniversidade(this);
 }
 
-void Universidade::imprime() {
+void Universidade::imprimir() {
   std::cout << "A universidade " << nome << "tem os seguintes departamentos:\n";
 
   if (departamentos.getTamanho() != 0) {
     Departamento* dep = departamentos.irInicio();
-  
+
     while (!departamentos.noFim()) {
 
       std::cout << '\t' << dep->getNome() << '\n';
-      dep = departamentos.avancar();    
+      dep = departamentos.avancar();
     }
 
-  
+
   }
 
   std::cout.flush();

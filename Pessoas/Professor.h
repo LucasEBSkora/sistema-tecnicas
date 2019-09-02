@@ -14,8 +14,7 @@ public:
   ~Professor();
   Professor();
   Professor(int ID, Data Nascimento, std::string nomePessoa, Universidade* uni, Departamento* dep);
-  void inicializar(Data Nascimento, std::string nomePessoa, Universidade* uni, Departamento* dep);
-  void imprimePessoa() override;
+  void imprimir() override;
 };
 
 #endif

@@ -4,7 +4,7 @@
 #include <string>
 
 class Data {
-  
+
   public:
     int dia;
     int mes;
@@ -13,7 +13,7 @@ class Data {
     ~Data();
     Data(int Dia, int Mes, int Ano);
     std::string paraTexto();
+    static Data atual();
+};
 
-};  
-
-#endif 
+#endif
