@@ -3,6 +3,7 @@
 
 #include "../utils/String.h"
 #include "../utils/Data.h"
+#include "Pessoa.h"
 
 class Aluno : public Pessoa {
   private:

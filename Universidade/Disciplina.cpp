@@ -9,7 +9,7 @@ Disciplina::~Disciplina() {
 
 }
 
-Disciplina::Disciplina(int ID, std::string Nome, std::string AreaDoConhecimento, unsigned int MaxAlunos) :
+Disciplina::Disciplina(int ID, String Nome, String AreaDoConhecimento, unsigned int MaxAlunos) :
   id{ID}, nome{Nome}, areaDoConhecimento{AreaDoConhecimento}, maxAlunos{MaxAlunos} {
 
 }
@@ -44,11 +44,11 @@ int Disciplina::getID() {
 }
 
 
-void Disciplina::setNome(std::string Nome) {
+void Disciplina::setNome(String Nome) {
   nome = Nome;
 }
 
-std::string Disciplina::getNome() {
+String Disciplina::getNome() {
   return nome;
 }
 

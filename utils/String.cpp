@@ -9,6 +9,20 @@ String::String(const char* s = "") :
    strcpy(ptr, s);
 
 }
+
+String::String(const String& s) :
+  tam{s.tam} {
+    ptr = new char[tam + 1];
+    strcpy(ptr, s.ptr);
+}
+
+String::String() :
+  tam {0},
+  ptr{nullptr}
+ {;
+
+}
+
 String::~String() {
   delete []ptr;
   ptr = nullptr;
@@ -43,4 +57,9 @@ void String::setString(const char* s) {
     ptr = new char[tam + 1];
     strcpy(ptr, s);
   }
+}
+
+std::ostream& operator<< (std::ostream& saida, const String& s) {
+  saida << s.ptr;
+  return saida;
 }

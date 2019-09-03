@@ -21,7 +21,7 @@ class Departamento {
   Departamento(int ID, String Nome, Universidade* uni);
   ~Departamento();
   void setNome(String novoNome);
-  std::string getNome();
+  String getNome();
   void setUniversidade(Universidade* uni);
 
   void adicionarDisciplina(Disciplina* disciplina);

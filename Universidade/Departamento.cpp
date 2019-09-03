@@ -69,7 +69,6 @@ void Departamento::imprimir() {
     Disciplina* dis = disciplinas.irInicio();
 
     while (dis != nullptr) {
-
       std::cout << '\t' << dis->getNome() << '\n';
       dis = disciplinas.avancar();
     }
