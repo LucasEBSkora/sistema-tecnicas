@@ -1,7 +1,7 @@
 #ifndef PESSOA_H
 #define PESSOA_H
 
-#include <string>
+#include "../utils/String.h"
 #include "../utils/Data.h"
 
 class Pessoa {
@@ -9,11 +9,11 @@ protected:
   int id;
   Data nascimento;
   int idade;
-  std::string nome;
+  String nome;
 public:
   Pessoa();
   ~Pessoa();
-  Pessoa(int ID, Data Nascimento, std::string nomePessoa);
+  Pessoa(int ID, Data Nascimento, String nomePessoa);
   void calculaIdade(Data atual);
   virtual void imprimir();
   int getID();

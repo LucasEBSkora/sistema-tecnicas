@@ -1,27 +1,27 @@
 #ifndef DISCIPLINA_H
 #define DISCIPLINA_H
 
-#include <string>
+#include "../utils/String.h"
 #include "../listas/aluno/ListaAlunos.h"
 #include "../Pessoas/Aluno.h"
 
 class Disciplina {
   private:
     int id;
-    std::string nome;
-    std::string areaDoConhecimento;
+    String nome;
+    String areaDoConhecimento;
     unsigned int maxAlunos;
     ListaAlunos alunos;
   public:
     Disciplina();
     ~Disciplina();
-    Disciplina(int ID, std::string Nome, std::string AreaDoConhecimento, unsigned int MaxAlunos);
+    Disciplina(int ID, String Nome, String AreaDoConhecimento, unsigned int MaxAlunos);
     void adicionarAluno(Aluno *novoAluno);
     void removerAluno(int ID);
     void setID(int ID);
     int getID();
-    void setNome(std::string Nome);
-    std::string getNome();
+    void setNome(String Nome);
+    String getNome();
     void imprimir();
 };
 

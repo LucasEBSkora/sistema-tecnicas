@@ -1,6 +1,7 @@
 #include "Principal.h"
 
 #include <iostream>
+#include "utils/String.h"
 
 Principal::~Principal() {
 
@@ -8,21 +9,21 @@ Principal::~Principal() {
 
 Principal::Principal() :
   idAtual{0},
-  princeton{idAtual++, "Princeton"},
-  cambridge{idAtual++, "Cambridge" },
-  UTFPR{idAtual++, "UTFPR"},
-  DAINF{idAtual++, "DAINF", &UTFPR},
-  fisicaPrinceton{idAtual++, "Department of Phisics", &princeton },
-  matematicaCambridge{idAtual++, "Faculty of Mathematics", &cambridge },
-  simao{idAtual++, Data(3, 10, 1976), "Simao", &UTFPR, &DAINF},
-  newton{idAtual++, Data(4, 1, 1643), "Newton", &cambridge, &matematicaCambridge},
-  einstein{idAtual++, Data(14, 3, 1879), "Einstein", &princeton, &fisicaPrinceton},
-  tecProg{idAtual++, "Tecnicas de Programacao", "Computacao", 44},
-  fundProg1{idAtual++, "Fundamentos de Programacao 1", "Computacao", 44},
-  intrLog{idAtual++, "Introducao a Logica para Computacao", "Computacao", 44},
-  thiago{idAtual++, Data(26, 10, 2000), "Thiago de Mendonca Mildemberger", 123},
-  franco{idAtual++, Data(6, 6, 2001), "Franco Barpp Gomes", 432},
-  lucas{idAtual++, Data(27, 11, 2000), "Lucas Eduardo Bonancio Skora", 171},
+  princeton{idAtual++, String("Princeton")},
+  cambridge{idAtual++, String("Cambridge") },
+  UTFPR{idAtual++, String("UTFPR")},
+  DAINF{idAtual++, String("DAINF"), &UTFPR},
+  fisicaPrinceton{idAtual++, String("Department of Phisics"), &princeton },
+  matematicaCambridge{idAtual++, String("Faculty of Mathematics"), &cambridge },
+  simao{idAtual++, Data(3, 10, 1976), String("Simao"), &UTFPR, &DAINF},
+  newton{idAtual++, Data(4, 1, 1643), String("Newton"), &cambridge, &matematicaCambridge},
+  einstein{idAtual++, Data(14, 3, 1879), String("Einstein"), &princeton, &fisicaPrinceton},
+  tecProg{idAtual++, String("Tecnicas de Programacao"), String("Computacao"), 44},
+  fundProg1{idAtual++, String("Fundamentos de Programacao 1"), String("Computacao"), 44},
+  intrLog{idAtual++, String("Introducao a Logica para Computacao"), String("Computacao"), 44},
+  thiago{idAtual++, Data(26, 10, 2000), String("Thiago de Mendonca Mildemberger"), 123},
+  franco{idAtual++, Data(11, 1, 2002), String("Franco Barpp Gomes"), 432},
+  lucas{idAtual++, Data(27, 11, 2000), String("Lucas Eduardo Bonancio Skora"), 171},
   dataAtual{Data::atual()}
  {
    inicProfessores();

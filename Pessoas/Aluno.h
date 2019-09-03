@@ -1,7 +1,7 @@
 #ifndef ALUNO_H
 #define ALUNO_H
 
-#include "Pessoa.h"
+#include "../utils/String.h"
 #include "../utils/Data.h"
 
 class Aluno : public Pessoa {
@@ -11,12 +11,12 @@ class Aluno : public Pessoa {
   public:
     Aluno();
     ~Aluno();
-    Aluno(int ID, Data Nascimento, std::string nomePessoa, unsigned int ra);
+    Aluno(int ID, Data Nascimento, String nomePessoa, unsigned int ra);
 
     void setRA(unsigned int ra);
     unsigned int getRA();
-    void setNome(std::string Nome);
-    std::string getNome();
+    void setNome(String Nome);
+    String getNome();
     void imprimir() override;
 
 };

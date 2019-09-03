@@ -5,6 +5,7 @@
 #include "../Universidade/Universidade.h"
 #include "../Universidade/Departamento.h"
 #include "../utils/Data.h"
+#include "../utils/String.h"
 
 class Professor : public Pessoa {
 private:
@@ -13,7 +14,7 @@ private:
 public:
   ~Professor();
   Professor();
-  Professor(int ID, Data Nascimento, std::string nomePessoa, Universidade* uni, Departamento* dep);
+  Professor(int ID, Data Nascimento, String nomePessoa, Universidade* uni, Departamento* dep);
   void imprimir() override;
 };
 

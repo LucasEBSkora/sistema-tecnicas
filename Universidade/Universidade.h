@@ -3,22 +3,22 @@
 
 #include "Departamento.h"
 #include "../listas/departamento/ListaDepartamentos.h"
-#include <string>
+#include "../utils/String.h"
 
 
 class Universidade {
 private:
   int id;
-  std::string nome;
+  String nome;
   ListaDepartamentos departamentos;
 
 public:
-  Universidade(int ID, std::string Nome);
+  Universidade(int ID, String Nome);
   Universidade();
   ~Universidade();
 
-  void setNome(std::string Nome);
-  std::string getNome();
+  void setNome(String Nome);
+  String getNome();
 
   void imprimir();
 

@@ -6,7 +6,7 @@ Pessoa::~Pessoa() {
 
 }
 
-Pessoa::Pessoa(int ID, Data Nascimento, std::string nomePessoa = "") :
+Pessoa::Pessoa(int ID, Data Nascimento, String nomePessoa = String()) :
   id{ID}, nascimento{Nascimento}, idade{-1}, nome{nomePessoa} {
 
 }

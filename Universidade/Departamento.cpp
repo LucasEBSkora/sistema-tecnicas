@@ -5,7 +5,7 @@
 
   }
 
-  Departamento::Departamento(int ID, std::string Nome, Universidade* uni)
+  Departamento::Departamento(int ID, String Nome, Universidade* uni)
     : id{ID}, nome{Nome}, universidade{uni} {
 
   }
@@ -14,11 +14,11 @@
 
   }
 
-  void Departamento::setNome(std::string novoNome) {
+  void Departamento::setNome(String novoNome) {
     nome = novoNome;
   }
 
-  std::string Departamento::getNome() {
+  String Departamento::getNome() {
     return nome;
   }
 

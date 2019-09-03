@@ -1,7 +1,7 @@
 #include "Disciplina.h"
 #include <iostream>
 Disciplina::Disciplina() :
-  id{-1}, nome{""}, areaDoConhecimento{""} {
+  id{-1}, nome{""}, areaDoConhecimento{""}, maxAlunos{0} {
 
 }
 

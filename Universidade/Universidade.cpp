@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-Universidade::Universidade(int ID, std::string Nome) : id{ID}, nome{Nome} {
+Universidade::Universidade(int ID, String Nome) : id{ID}, nome{Nome} {
 
 }
 
@@ -14,11 +14,11 @@ Universidade::~Universidade() {
 
 }
 
-void Universidade::setNome(std::string Nome) {
+void Universidade::setNome(String Nome) {
   nome = Nome;
 
 }
-std::string Universidade::getNome() {return nome;}
+String Universidade::getNome() {return nome;}
 
 void Universidade::adicionarDepartamento(Departamento* dept) {
   departamentos.adicionarElementoFim(dept);
@@ -27,7 +27,7 @@ void Universidade::adicionarDepartamento(Departamento* dept) {
 
 void Universidade::imprimir() {
   std::cout << "A universidade " << nome << " tem os seguintes departamentos:\n";
-  
+
   if (departamentos.getTamanho() != 0) {
 
     Departamento* dep = departamentos.irInicio();

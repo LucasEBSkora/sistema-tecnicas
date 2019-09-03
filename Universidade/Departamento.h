@@ -3,7 +3,7 @@
 
 
 class Universidade;
-#include <string>
+#include "../utils/String.h"
 #include "../listas/disciplina/ListaDisciplinas.h"
 #include "../listas/aluno/ListaAlunos.h"
 #include "Disciplina.h"
@@ -12,15 +12,15 @@ class Universidade;
 class Departamento {
   private:
     int id;
-    std::string nome;
+    String nome;
     Universidade* universidade;
     ListaDisciplinas disciplinas;
     ListaAlunos alunos;
   public:
   Departamento();
-  Departamento(int ID, std::string Nome, Universidade* uni);
+  Departamento(int ID, String Nome, Universidade* uni);
   ~Departamento();
-  void setNome(std::string novoNome);
+  void setNome(String novoNome);
   std::string getNome();
   void setUniversidade(Universidade* uni);
 

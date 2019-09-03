@@ -9,7 +9,7 @@ Aluno::~Aluno() {
 
 }
 
-Aluno::Aluno(int ID, Data Nascimento, std::string nomePessoa, unsigned int ra)
+Aluno::Aluno(int ID, Data Nascimento, String nomePessoa, unsigned int ra)
   : Pessoa(ID, Nascimento, nomePessoa), RA{ra} {
 
 }
@@ -23,11 +23,11 @@ unsigned int Aluno::getRA() {
   return RA;
 }
 
-void Aluno::setNome(std::string Nome) {
+void Aluno::setNome(String Nome) {
   nome = Nome;
 }
 
-std::string Aluno::getNome() {
+String Aluno::getNome() {
   return nome;
 }
 

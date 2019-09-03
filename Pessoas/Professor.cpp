@@ -9,7 +9,7 @@
 
   }
 
-  Professor::Professor(int ID, Data Nascimento, std::string nomePessoa, Universidade* uni, Departamento* dep) :
+  Professor::Professor(int ID, Data Nascimento, String nomePessoa, Universidade* uni, Departamento* dep) :
     Pessoa(ID, Nascimento, nomePessoa), universidade{uni}, departamento{dep} {
 
   }

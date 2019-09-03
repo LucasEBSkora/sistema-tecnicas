@@ -1,7 +1,7 @@
 #ifndef DATA_H
 #define DATA_H
 
-#include <string>
+#include "String.h"
 
 class Data {
 
@@ -12,7 +12,7 @@ class Data {
     Data();
     ~Data();
     Data(int Dia, int Mes, int Ano);
-    std::string paraTexto();
+    String paraTexto();
     static Data atual();
 };
 
