@@ -15,8 +15,8 @@ public:
   ~Pessoa();
   Pessoa(int ID, Data Nascimento, String nomePessoa);
   void calculaIdade(Data atual);
-  virtual void imprimir();
-  int getID();
+  virtual void imprimir() const;
+  int getID() const;
   void setID(int ID);
 };
 

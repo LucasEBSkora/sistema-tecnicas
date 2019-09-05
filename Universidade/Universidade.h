@@ -18,7 +18,7 @@ public:
   ~Universidade();
 
   void setNome(String Nome);
-  String getNome();
+  String getNome() const;
 
   void imprimir();
 

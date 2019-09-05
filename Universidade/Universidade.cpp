@@ -18,7 +18,8 @@ void Universidade::setNome(String Nome) {
   nome = Nome;
 
 }
-String Universidade::getNome() {return nome;}
+
+String Universidade::getNome() const {return nome;}
 
 void Universidade::adicionarDepartamento(Departamento* dept) {
   departamentos.adicionarElementoFim(dept);

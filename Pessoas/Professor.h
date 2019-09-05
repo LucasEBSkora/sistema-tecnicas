@@ -15,7 +15,7 @@ public:
   ~Professor();
   Professor();
   Professor(int ID, Data Nascimento, String nomePessoa, Universidade* uni, Departamento* dep);
-  void imprimir() override;
+  void imprimir() const override;
 };
 
 #endif

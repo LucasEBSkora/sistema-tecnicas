@@ -14,7 +14,7 @@
 
   }
 
-void Professor::imprimir() {
+void Professor::imprimir() const {
   std::cout << "O professor " << nome << " tem " << idade << " anos, nasceu em " << nascimento.paraTexto() <<
   " e trabalha em " << universidade->getNome() << " no departamento " << departamento->getNome() << std::endl;
 }

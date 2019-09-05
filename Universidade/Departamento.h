@@ -21,7 +21,7 @@ class Departamento {
   Departamento(int ID, String Nome, Universidade* uni);
   ~Departamento();
   void setNome(String novoNome);
-  String getNome();
+  String getNome() const;
   void setUniversidade(Universidade* uni);
 
   void adicionarDisciplina(Disciplina* disciplina);

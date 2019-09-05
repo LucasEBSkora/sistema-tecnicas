@@ -17,8 +17,8 @@ class Aluno : public Pessoa {
     void setRA(unsigned int ra);
     unsigned int getRA();
     void setNome(String Nome);
-    String getNome();
-    void imprimir() override;
+    String getNome() const;
+    void imprimir() const override;
 
 };
 

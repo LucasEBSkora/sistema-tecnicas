@@ -19,9 +19,9 @@ class Disciplina {
     void adicionarAluno(Aluno *novoAluno);
     void removerAluno(int ID);
     void setID(int ID);
-    int getID();
+    int getID() const;
     void setNome(String Nome);
-    String getNome();
+    String getNome() const;
     void imprimir();
 };
 

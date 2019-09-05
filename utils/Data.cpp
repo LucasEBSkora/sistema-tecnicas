@@ -16,7 +16,7 @@ Data::Data(int Dia, int Mes, int Ano) : dia{Dia}, mes{Mes}, ano{Ano}{
 Data::~Data() {
 
 }
-String Data::paraTexto() {
+String Data::paraTexto() const{
 
   char str[11];
   sprintf(str, "%02d/%02d/%04d", dia, mes, ano);

@@ -15,17 +15,16 @@ class String {
     String();
     ~String();
 
-    const char* getString();
-    long unsigned int getTamanho();
+    const char* getString() const;
+    long unsigned int getTamanho() const;
 
     void operator=(const char* s);
     void operator=(String& s);
-    bool operator==(String& s);
+    bool operator==(String& s) const;
 
   private:
     void setString(const char* s);
 
-  friend std::ostream& operator<< (std::ostream& saida, const String& s);
 };
 
 std::ostream& operator<< (std::ostream& saida, const String& s);

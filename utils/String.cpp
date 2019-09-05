@@ -29,11 +29,11 @@ String::~String() {
 
 }
 
-const char* String::getString() {
+const char* String::getString() const {
   return ptr;
 }
 
-long unsigned int String::getTamanho() {
+long unsigned int String::getTamanho() const {
   return tam;
 }
 
@@ -45,7 +45,7 @@ void String::operator=(String& s) {
   setString(s.getString());
 }
 
-bool String::operator==(String& s) {
+bool String::operator==(String& s) const {
   return (strcmp(ptr, s.getString()) == 0);
 }
 
@@ -60,6 +60,6 @@ void String::setString(const char* s) {
 }
 
 std::ostream& operator<< (std::ostream& saida, const String& s) {
-  saida << s.ptr;
+  saida << s.getString();
   return saida;
 }

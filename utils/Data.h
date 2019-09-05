@@ -12,7 +12,7 @@ class Data {
     Data();
     ~Data();
     Data(int Dia, int Mes, int Ano);
-    String paraTexto();
+    String paraTexto() const;
     static Data atual();
 };
 

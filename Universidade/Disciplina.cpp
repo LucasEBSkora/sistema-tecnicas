@@ -39,7 +39,7 @@ void Disciplina::setID(int ID) {
   id = ID;
 }
 
-int Disciplina::getID() {
+int Disciplina::getID() const {
   return id;
 }
 
@@ -48,7 +48,7 @@ void Disciplina::setNome(String Nome) {
   nome = Nome;
 }
 
-String Disciplina::getNome() {
+String Disciplina::getNome() const {
   return nome;
 }
 

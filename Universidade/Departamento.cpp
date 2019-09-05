@@ -18,7 +18,7 @@
     nome = novoNome;
   }
 
-  String Departamento::getNome() {
+  String Departamento::getNome() const {
     return nome;
   }
 

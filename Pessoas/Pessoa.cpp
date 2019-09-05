@@ -25,11 +25,11 @@ void Pessoa::calculaIdade(Data atual) {
   else if (nascimento.mes == atual.mes && nascimento.dia > atual.dia) --idade;
 }
 
-void Pessoa::imprimir() {
+void Pessoa::imprimir() const {
   std::cout << nome << " tem " << idade << "anos, nasceu em " << nascimento.paraTexto() << std::endl;
 }
 
-int Pessoa::getID() {
+int Pessoa::getID() const {
   return id;
 }
 

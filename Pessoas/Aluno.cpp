@@ -27,11 +27,11 @@ void Aluno::setNome(String Nome) {
   nome = Nome;
 }
 
-String Aluno::getNome() {
+String Aluno::getNome() const {
   return nome;
 }
 
-void Aluno::imprimir() {
+void Aluno::imprimir() const {
   std::cout << "O aluno " << nome << " tem " << idade << " anos, nasceu em " << nascimento.paraTexto() <<
   " e seu RA e " << RA << std::endl;
 }
