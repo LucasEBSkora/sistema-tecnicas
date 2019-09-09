@@ -42,7 +42,7 @@ Disciplina* Departamento::removerDisciplina(int ID) {
   } else {
     while (!disciplinas.noFim()) {
 
-      if (disciplinas.avancar()->getID() == ID) ptr = disciplinas.removerDisciplinaAtual();
+      if (disciplinas.avancar()->getID() == ID) ptr = disciplinas.removerAtual();
     }
 
   }

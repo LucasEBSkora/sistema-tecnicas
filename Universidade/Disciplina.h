@@ -2,7 +2,7 @@
 #define DISCIPLINA_H
 
 #include "../utils/String.h"
-#include "../listas/aluno/ListaAlunos.h"
+#include "../utils/Lista.h"
 #include "../Pessoas/Aluno.h"
 
 class Disciplina {
@@ -11,7 +11,7 @@ class Disciplina {
     String nome;
     String areaDoConhecimento;
     unsigned int maxAlunos;
-    ListaAlunos alunos;
+    Lista<Aluno*> alunos;
   public:
     Disciplina();
     ~Disciplina();

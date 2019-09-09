@@ -1,5 +1,6 @@
 #include "Disciplina.h"
 #include <iostream>
+
 Disciplina::Disciplina() :
   id{-1}, nome{""}, areaDoConhecimento{""}, maxAlunos{0} {
 
@@ -14,8 +15,10 @@ Disciplina::Disciplina(int ID, String Nome, String AreaDoConhecimento, unsigned 
 
 }
 
-void Disciplina::adicionarAluno(Aluno *novoAluno) {
-  alunos.adicionarElementoFim(novoAluno);
+bool Disciplina::adicionarAluno(Aluno *novoAluno) {
+  if (alunos.getTamanho() == maxAlunos) return false;
+  else alunos.adicionarElementoFim(novoAluno);
+  return true;
 }
 
 void Disciplina::removerAluno(int ID) {
@@ -29,7 +32,7 @@ void Disciplina::removerAluno(int ID) {
   } else {
     while (!alunos.noFim()) {
 
-      if (alunos.avancar()->getID() == ID) alunos.removerAlunoAtual();
+      if (alunos.avancar()->getID() == ID) alunos.removerAtual();
     }
 
   }

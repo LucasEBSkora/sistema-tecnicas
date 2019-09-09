@@ -2,15 +2,15 @@
 #define UNIVERSIDADE_H
 
 #include "Departamento.h"
-#include "../listas/departamento/ListaDepartamentos.h"
+//#include "../listas/departamento/ListaDepartamentos.h"
 #include "../utils/String.h"
-
+#include "../utils/Lista.h"
 
 class Universidade {
 private:
   int id;
   String nome;
-  ListaDepartamentos departamentos;
+  Lista<Departamento*> departamentos;
 
 public:
   Universidade(int ID, String Nome);
