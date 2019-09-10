@@ -6,6 +6,7 @@
 #include "Universidade/Departamento.h"
 #include "Universidade/Universidade.h"
 #include "Universidade/Disciplina.h"
+#include "utils/Lista.h"
 #include "utils/Data.h"
 
 class Principal {
@@ -32,6 +33,12 @@ class Principal {
     Aluno thiago;
     Aluno franco;
     Aluno lucas;
+
+    Lista<Universidade*> universidades;
+    Lista<Departamento*> departamentos;
+    Lista<Professor*> professores;
+    Lista<Disciplina*> disciplinas;
+    Lista<Aluno*> alunos;
 
     Data dataAtual;
 

@@ -16,7 +16,7 @@ class Disciplina {
     Disciplina();
     ~Disciplina();
     Disciplina(int ID, String Nome, String AreaDoConhecimento, unsigned int MaxAlunos);
-    void adicionarAluno(Aluno *novoAluno);
+    bool adicionarAluno(Aluno *novoAluno);
     void removerAluno(int ID);
     void setID(int ID);
     int getID() const;

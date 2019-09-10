@@ -1,6 +1,6 @@
-#include "Pessoa.h"
 
 #include <iostream>
+#include "Pessoa.h"
 
 Pessoa::~Pessoa() {
 
@@ -35,4 +35,12 @@ int Pessoa::getID() const {
 
 void Pessoa::setID(int ID) {
   id = ID;
+}
+
+String Pessoa::getNome() const {
+  return nome;
+}
+
+void Pessoa::setNome(String Nome) {
+  nome = Nome;
 }

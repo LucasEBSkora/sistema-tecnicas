@@ -39,7 +39,6 @@ void Universidade::imprimir() {
       dep = departamentos.avancar();
     }
 
-
   }
 
   std::cout.flush();

@@ -18,6 +18,8 @@ public:
   virtual void imprimir() const;
   int getID() const;
   void setID(int ID);
+  String getNome() const;
+  void setNome(String Nome);
 };
 
 #endif
